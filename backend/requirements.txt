@@ -1,0 +1,8 @@
+fastapi>=0.110
+uvicorn>=0.29
+sqlalchemy>=2.0
+psycopg2-binary>=2.9
+pandas>=2.0
+numpy
+pyarrow  # only for prepare.py / load_to_postgres.py (parquet)
+scikit-learn  # only for prepare.py (AI forecasts)

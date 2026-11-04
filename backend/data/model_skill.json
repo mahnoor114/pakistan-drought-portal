@@ -1,0 +1,242 @@
+{
+ "method": "Gradient boosting (HistGradientBoostingRegressor) per target and lead. For each, a 'direct' or 'change from current value' formulation is chosen on 2019-2021; skill is reported on 2022-2025, which the model never saw. Forecasts use a refit on all data.",
+ "features": [
+  "lat",
+  "lon",
+  "rain_mm_anom",
+  "tc_soil_moisture_mm_anom",
+  "tc_tmax_c_anom",
+  "tc_water_deficit_mm_anom",
+  "tc_swe_mm_anom",
+  "ndvi_anom",
+  "lst_day_c_anom",
+  "power_soil_wetness_root_0_1_anom",
+  "cpc_soil_moisture_mm_anom",
+  "tc_runoff_mm_anom",
+  "spi_1",
+  "spi_3",
+  "spi_6",
+  "spi_12",
+  "spei_1",
+  "spei_3",
+  "spei_6",
+  "spei_12",
+  "tc_pdsi",
+  "vhi",
+  "vci",
+  "tci",
+  "gdo_fapar_anomaly",
+  "gdo_soil_moisture_anomaly",
+  "gdo_grace_tws_anomaly",
+  "nino34_anom",
+  "oni",
+  "dmi_iod",
+  "pdo",
+  "soi",
+  "ao",
+  "nao",
+  "mei_v2",
+  "clim_rain",
+  "cropland_pct",
+  "bare_pct",
+  "tree_pct",
+  "snow_ice_pct",
+  "spei_3_lag1",
+  "spei_3_lag2",
+  "spi_3_lag1",
+  "spi_3_lag2",
+  "vhi_lag1",
+  "vhi_lag2",
+  "rain_mm_anom_lag1",
+  "rain_mm_anom_lag2",
+  "gdo_soil_moisture_anomaly_lag1",
+  "gdo_soil_moisture_anomaly_lag2",
+  "nino34_anom_lag3",
+  "dmi_iod_lag3",
+  "m_sin",
+  "m_cos"
+ ],
+ "issued_from": "2025-12",
+ "skill": {
+  "spei_3_lead1": {
+   "target": "SPEI-3",
+   "lead_months": 1,
+   "formulation": "direct",
+   "test_years": "2022-2025",
+   "model": {
+    "n": 6048,
+    "rmse": 0.893,
+    "corr": 0.777,
+    "pod": 0.577,
+    "far": 0.259,
+    "f1": 0.649
+   },
+   "persistence": {
+    "n": 6048,
+    "rmse": 1.182,
+    "corr": 0.654,
+    "pod": 0.593,
+    "far": 0.418,
+    "f1": 0.588
+   },
+   "climatology": {
+    "n": 6048,
+    "rmse": 1.413,
+    "corr": 0.147,
+    "pod": 0.001,
+    "far": 0.938,
+    "f1": 0.001
+   }
+  },
+  "spei_3_lead2": {
+   "target": "SPEI-3",
+   "lead_months": 2,
+   "formulation": "change",
+   "test_years": "2022-2025",
+   "model": {
+    "n": 6048,
+    "rmse": 1.218,
+    "corr": 0.531,
+    "pod": 0.271,
+    "far": 0.386,
+    "f1": 0.376
+   },
+   "persistence": {
+    "n": 6048,
+    "rmse": 1.694,
+    "corr": 0.289,
+    "pod": 0.385,
+    "far": 0.622,
+    "f1": 0.382
+   },
+   "climatology": {
+    "n": 6048,
+    "rmse": 1.415,
+    "corr": 0.136,
+    "pod": 0.001,
+    "far": 0.938,
+    "f1": 0.001
+   }
+  },
+  "spei_3_lead3": {
+   "target": "SPEI-3",
+   "lead_months": 3,
+   "formulation": "direct",
+   "test_years": "2022-2025",
+   "model": {
+    "n": 6048,
+    "rmse": 1.488,
+    "corr": 0.215,
+    "pod": 0.166,
+    "far": 0.604,
+    "f1": 0.234
+   },
+   "persistence": {
+    "n": 6048,
+    "rmse": 2.063,
+    "corr": -0.053,
+    "pod": 0.249,
+    "far": 0.76,
+    "f1": 0.245
+   },
+   "climatology": {
+    "n": 6048,
+    "rmse": 1.415,
+    "corr": 0.13,
+    "pod": 0.001,
+    "far": 0.938,
+    "f1": 0.001
+   }
+  },
+  "vhi_lead1": {
+   "target": "VHI",
+   "lead_months": 1,
+   "formulation": "change",
+   "test_years": "2022-2025",
+   "model": {
+    "n": 3150,
+    "rmse": 0.17,
+    "corr": 0.506,
+    "pod": 0.234,
+    "far": 0.484,
+    "f1": 0.322
+   },
+   "persistence": {
+    "n": 3150,
+    "rmse": 0.177,
+    "corr": 0.527,
+    "pod": 0.445,
+    "far": 0.587,
+    "f1": 0.429
+   },
+   "climatology": {
+    "n": 3150,
+    "rmse": 0.291,
+    "corr": -0.086,
+    "pod": 0.398,
+    "far": 0.883,
+    "f1": 0.181
+   }
+  },
+  "vhi_lead2": {
+   "target": "VHI",
+   "lead_months": 2,
+   "formulation": "change",
+   "test_years": "2022-2025",
+   "model": {
+    "n": 3024,
+    "rmse": 0.191,
+    "corr": 0.3,
+    "pod": 0.156,
+    "far": 0.566,
+    "f1": 0.229
+   },
+   "persistence": {
+    "n": 3024,
+    "rmse": 0.226,
+    "corr": 0.235,
+    "pod": 0.314,
+    "far": 0.749,
+    "f1": 0.279
+   },
+   "climatology": {
+    "n": 3024,
+    "rmse": 0.272,
+    "corr": 0.018,
+    "pod": 0.425,
+    "far": 0.856,
+    "f1": 0.215
+   }
+  },
+  "vhi_lead3": {
+   "target": "VHI",
+   "lead_months": 3,
+   "formulation": "direct",
+   "test_years": "2022-2025",
+   "model": {
+    "n": 3024,
+    "rmse": 0.211,
+    "corr": 0.231,
+    "pod": 0.253,
+    "far": 0.671,
+    "f1": 0.286
+   },
+   "persistence": {
+    "n": 3024,
+    "rmse": 0.237,
+    "corr": 0.166,
+    "pod": 0.239,
+    "far": 0.82,
+    "f1": 0.205
+   },
+   "climatology": {
+    "n": 3024,
+    "rmse": 0.272,
+    "corr": -0.003,
+    "pod": 0.417,
+    "far": 0.863,
+    "f1": 0.207
+   }
+  }
+ }
+}

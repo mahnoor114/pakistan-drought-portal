@@ -1,0 +1,18 @@
+# secrets - never commit (use the .env.example files)
+.env
+.env.local
+backend/.env
+frontend/.env.local
+
+# dependencies and build output
+node_modules/
+frontend/dist/
+*.tsbuildinfo
+
+# Python
+__pycache__/
+*.pyc
+
+# server logs
+*.log
+*.err
