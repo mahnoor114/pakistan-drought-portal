@@ -100,6 +100,8 @@ cp frontend/.env.example frontend/.env.local      # add your Mapbox token
 
 ### 2. Run
 
+**Windows, control panel:** double-click **`Drought_Portal.bat`** for a menu to start, stop or restart the portal, open it or the API docs, show the address for phones and other PCs, view the server log, refresh the data (`prepare.py`), rebuild the web app and add a desktop shortcut. The server runs in its own minimised window and logs to `backend/logs/server.log`. From a terminal: `Drought_Portal.bat start | stop | restart | open | status`.
+
 **Windows, one click:** double-click **`start_portal.bat`**. It checks the database, builds the web app on first run, installs the Python packages, starts the server and opens your browser.
 
 **Any OS, manually:**
@@ -134,6 +136,8 @@ npm run dev                   # http://localhost:5173, proxies /api to :8050
 3. Load everything into PostgreSQL (`load_to_postgres.py`).
 4. Restart the server; some summaries are cached in memory.
 
+On Windows, `Drought_Portal.bat` does step 2 (option 8) and step 4 (option 5) from its menu.
+
 ## API overview
 
 | Group | Endpoints |
@@ -163,6 +167,7 @@ Filters on `/api/data/{table}`: `?filter=column:op:value` with `eq, ne, gt, gte,
 │   ├── scripts/          framework diagram renderer
 │   └── .env.example
 ├── docs/                 framework diagram (PNG / SVG)
+├── Drought_Portal.bat    control panel on Windows (start / stop / logs / refresh)
 └── start_portal.bat      one-click start on Windows
 ```
 
